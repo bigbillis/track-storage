@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+
+
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Welcome to  <%= title %></p>
+
+    <p>Upload a GPX file here: </p>
+
+    <form action="/upload" enctype="multipart/form-data" method="post" >
+      <input type= "file" name="uploadedFile">
+      <input type="submit" value="Upload">
+    </form>
+
+    <p>  Display list of all stored tracks with starting position </p>
+    <form action="query/getAll"method="get" >
+      <input type="submit" value="Display All">
+    </form>
+
+    <p> Search tracks by position  </p>
+
+    <form action="query/getTrack"method="get" >
+      Search by name: <input type= "text" name="trackName">
+      <input type="submit" value="Search">
+    </form>
+
+    <p> </p>
+
+    <form action="query/search"method="get" >
+      Search by position: <br>
+      Longitude: <input type= "text" name="lon">
+      Latitude: <input type= "text" name="lat">
+      <input type="submit" value="Search">
+    </form>
+
+    <p> Remove tracks </p>
+
+    <form action="query/removeTrack"method="get" >
+       Remove by name: <input type= "text" name="trackName">
+        <input type="submit" value="Remove">
+    </form>
+
+  </body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> All tracks </title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+
+
+  </head>
+  <body>
+<b>  Track List </b>
+<p>
+
+    <table>
+        <tr>
+            <th>Track Name</th>
+            <th>Starting Lon</th>
+            <th>Starting Lat</th>
+            <th></th>
+        </tr>
+        <% for(var i=0; i < trackData.Items.length; i++) { %>
+        <tr>
+            <td> <a href="getTrack?trackName=<%= trackData.Items[i].track_name%>">  <%= trackData.Items[i].track_name%> </a> </td>
+            <td> <%= trackData.Items[i].lon%> </a> </td>
+            <td>  <%= trackData.Items[i].lat%> </a> </td>
+        </tr>
+        <% } %>
+    </table>
+
+
+  </body>
+</html>

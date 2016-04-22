@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> <%= trackData.Items[0].track_name %> </title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+
+
+  </head>
+  <body>
+<b> <%= trackData.Items[0].track_name %> details </b>
+<p>
+
+    <table>
+        <tr>
+            <th> Sequence </th>
+            <th> Longitude </th>
+            <th> Latitude </th>
+            <th> Time </th>
+            <th></th>
+        </tr>
+        <% for(var i=0; i < trackData.Items[0].lon.length; i++) { %>
+        <tr>
+            <td> <%= i+1 %>  </td>
+            <td> <%= trackData.Items[0].lon[i]%> </a> </td>
+            <td> <%= trackData.Items[0].lat[i]%> </a> </td>
+            <td> <%= trackData.Items[0].time[i]%> </a> </td>
+        </tr>
+        <% } %>
+    </table>
+
+
+  </body>
+</html>
