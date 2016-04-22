@@ -6,7 +6,7 @@ Then you should create a table in DynamoDB with track_name as key.
 You shall run once bin/tracksCreateTable.js to create the table.
 Install the requeired dependences (npm install) and start bin/www.
 
-Basic Functionality
+Basic Functionality :
 
 - Read from GPX files and convert to JSON
 - Store GPX informaton in DynamoDB
